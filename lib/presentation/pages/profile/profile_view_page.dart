@@ -93,15 +93,20 @@ class _ProfileViewContent extends StatelessWidget {
                 onPressed: () => Navigator.of(context).pop(),
               ),
             ),
+            backgroundColor: context.backgroundColor,
             body: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.error_outline,
-                      size: 48, color: context.textSecondaryColor),
+                  Icon(
+                    Icons.error_outline_rounded,
+                    size: 48,
+                    color: context.textSecondaryColor,
+                  ),
                   const SizedBox(height: 16),
                   Text(
-                    profileState.errorMessage ?? AppLocalizations.of(context)!.profileLoadFailed,
+                    profileState.errorMessage ??
+                        AppLocalizations.of(context)!.profileLoadFailed,
                     style: TextStyle(color: context.textSecondaryColor),
                   ),
                   const SizedBox(height: 16),
@@ -324,7 +329,7 @@ class _ProfileViewContent extends StatelessWidget {
       builder: (sheetContext) => Container(
         decoration: BoxDecoration(
           color: Theme.of(context).scaffoldBackgroundColor,
-          borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
+          borderRadius: const BorderRadius.vertical(top: Radius.circular(18)),
         ),
         child: SafeArea(
           child: Column(
@@ -469,7 +474,7 @@ class _ProfileViewContent extends StatelessWidget {
       builder: (sheetContext) => Container(
         decoration: BoxDecoration(
           color: Theme.of(context).scaffoldBackgroundColor,
-          borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
+          borderRadius: const BorderRadius.vertical(top: Radius.circular(18)),
         ),
         child: SafeArea(
           child: Column(
@@ -779,8 +784,7 @@ class _ProfileAvatarState extends State<_ProfileAvatar> {
       child: CircleAvatar(
         radius: 50,
         backgroundColor: AppColors.primaryLight,
-        backgroundImage:
-            showImage ? CachedNetworkImageProvider(url) : null,
+        backgroundImage: showImage ? CachedNetworkImageProvider(url) : null,
         onBackgroundImageError: showImage
             ? (_, __) {
                 if (mounted) {

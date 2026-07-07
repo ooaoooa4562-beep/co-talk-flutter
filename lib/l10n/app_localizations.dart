@@ -1634,6 +1634,12 @@ abstract class AppLocalizations {
   /// **'정지됨'**
   String get profileStatusSuspended;
 
+  /// No description provided for @profileStatusUnknown.
+  ///
+  /// In ko, this message translates to:
+  /// **'알 수 없음'**
+  String get profileStatusUnknown;
+
   /// No description provided for @profileOnlineStatusOnline.
   ///
   /// In ko, this message translates to:

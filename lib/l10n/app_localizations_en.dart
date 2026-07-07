@@ -851,6 +851,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get profileStatusSuspended => 'Suspended';
 
   @override
+  String get profileStatusUnknown => 'Unknown';
+
+  @override
   String get profileOnlineStatusOnline => 'Online';
 
   @override
